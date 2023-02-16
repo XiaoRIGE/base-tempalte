@@ -1,0 +1,59 @@
+{
+  "name": "vite-js-app",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --open",
+    "qa": "vite --mode test",
+    "prod": "vite --mode production",
+    "build": "vite build",
+    "build:qa": "vite build --mode test --outDir qa",
+    "preview": "vite preview",
+    "commit": "npx cz",
+    "fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "prettier": "npx prettier --write .",
+    "style": "stylelint \"src/**/*.(css)\" --fix"
+  },
+  "dependencies": {
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "commitizen": "^4.3.0",
+    "cz-customizable": "^7.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.1",
+    "prettier": "^2.8.4",
+    "sass": "^1.58.0",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-standard": "^29.0.0",
+    "vite": "^4.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
+  },
+  "lint-staged": {
+    "*.{scss,vue}": [
+      "stylelint --fix"
+    ],
+    "*.{js,ts,vue}": [
+      "vue-cli-service lint"
+    ]
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "commitlint -eV"
+  }
+}
