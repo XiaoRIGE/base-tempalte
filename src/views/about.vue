@@ -26,6 +26,9 @@ import { defineAsyncComponent } from 'vue'
 const BaseForm = defineAsyncComponent(() =>
   import('../components/form/BaseForm.vue')
 )
+const DemoParent = defineAsyncComponent(() =>
+  import('../components/globalComponents/DemoParent.vue')
+)
 // 同步方式引入
 // import BaseForm from '../components/form/BaseForm.vue'
 
