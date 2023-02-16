@@ -9,6 +9,8 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
+## 环境
+node版本需大于14.18.+，或者16+及更高版本，否则会遇到一些预期以外的错误
 
 ## How to use
 
@@ -27,3 +29,28 @@ yarn prod => vite --mode production
 yarn build     => vite build --mode production
 yarn build:qa  => vite build --mode test
 ```
+
+### 主要用到的库
+
+- vue3全家桶 vue3 + vue-router@4 + pinia
+- http 请求:axios
+- 提交规范:git cz commitizen
+- 代码检查:eslint,格式化:prettier.提交之前检查与修复：lint-staged
+
+### idea
+
+编辑器统一使用VsCode,保证下载插件eslint和prettier
+
+
+
+### Customize configuration
+
+See [Configuration Reference](https://cli.vuejs.org/config/).
+
+其他规范参考：
+[clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript)
+[airbnb](https://github.com/airbnb/javascript)
+[eslint](https://eslint.vuejs.org/rules/)
+
+
+

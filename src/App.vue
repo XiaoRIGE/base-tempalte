@@ -1,33 +1,12 @@
-<script setup>
-import { ref, onMounted } from 'vue'
-import HelloWorld from '@/components/HelloWorld.vue'
-import { formatDateByTimeStamp } from '@/utils'
-const now = ref(0)
-onMounted(() => {
-  setInterval(() => {
-    now.value = formatDateByTimeStamp()
-  }, 1000)
-})
-
-const isPROD = ref(import.meta.env.PROD)
-console.log(1)
-
-// eslint-disable-next-line no-undef
-console.log('appName', appName)
-</script>
-
 <template>
-  <h5>{{ now }}</h5>
-  <h1>{{ isPROD }}</h1>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <h1>Hello App!</h1>
+  <p>
+    <router-link to="/">Go to Home</router-link>
+    <router-link to="/about">Go to About</router-link>
+    <router-link to="/class-a">Go to ClassA</router-link>
+    <router-link to="/class-b">Go to ClassB</router-link>
+  </p>
+  <router-view></router-view>
 </template>
 
 <style scoped>
@@ -42,5 +21,8 @@ console.log('appName', appName)
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+a {
+  padding-right: 16px;
 }
 </style>
