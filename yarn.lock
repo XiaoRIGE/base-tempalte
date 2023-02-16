@@ -2965,6 +2965,14 @@ pidtree@^0.6.0:
   resolved "https://registry.yarnpkg.com/pidtree/-/pidtree-0.6.0.tgz#90ad7b6d42d5841e69e0a2419ef38f8883aa057c"
   integrity sha512-eG2dWTVw5bzqGRztnHExczNxt5VGsE6OwTeCG3fdUf9KBsZzO3R5OIIIzWR+iZA0NtZ+RDVdaoE2dK1cn6jH4g==
 
+pinia@^2.0.30:
+  version "2.0.30"
+  resolved "https://registry.yarnpkg.com/pinia/-/pinia-2.0.30.tgz#b18a581dad6821ed5fbebfaf631229480ea9d2d9"
+  integrity sha512-q6DUmxWwe/mQgg+55QQjykpKC+aGeGdaJV3niminl19V08dE+LRTvSEuqi6/NLSGCKHI49KGL6tMNEOssFiMyA==
+  dependencies:
+    "@vue/devtools-api" "^6.4.5"
+    vue-demi "*"
+
 postcss-media-query-parser@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/postcss-media-query-parser/-/postcss-media-query-parser-0.2.3.tgz#27b39c6f4d94f81b1a73b8f76351c609e5cef244"
@@ -3778,6 +3786,11 @@ vite@^4.1.0:
     rollup "^3.10.0"
   optionalDependencies:
     fsevents "~2.3.2"
+
+vue-demi@*:
+  version "0.13.11"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.13.11.tgz#7d90369bdae8974d87b1973564ad390182410d99"
+  integrity sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==
 
 vue-eslint-parser@^9.0.1:
   version "9.1.0"
