@@ -1,17 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-const generateRoute = async () => {
-  const routeArr = []
-  const files = import.meta.glob('./*.js')
-
-  for (const path in files) {
-    const routes = await files[path]()
-    routeArr.push(...routes.default)
-  }
-  return routeArr
-}
-
-const routeArr = await generateRoute()
+import moduleARoutes from './moduleA'
+import moduleBRoutes from './moduleB'
 
 const routes = [
   {
@@ -25,7 +15,8 @@ const routes = [
     component: () => import('@/views/about.vue'),
   },
 
-  ...routeArr, // 各个模块的路由
+  ...moduleARoutes,
+  ...moduleBRoutes,
 
   {
     path: '/login',
