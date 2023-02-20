@@ -36,6 +36,7 @@ yarn build:qa  => vite build --mode test
 - http 请求:axios
 - 提交规范:git cz commitizen
 - 代码检查:eslint,格式化:prettier.提交之前检查与修复：lint-staged
+- [tailwindcss](https://www.tailwindcss.cn/docs/using-with-preprocessors) + postCss + autoprefixer 解决css命名困难且不统一问题
 
 ### idea
 

@@ -15,4 +15,8 @@ const aboutExeVisible = () => {
   console.log('you clicked the text')
 }
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+h1 {
+  font-size: 48px;
+}
+</style>
