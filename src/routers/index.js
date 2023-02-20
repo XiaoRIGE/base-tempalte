@@ -63,6 +63,9 @@ const routes = [
     path: '/:pathMatch(.*)*',
     name: 'not-found',
     component: import('@/views/error/404.vue'),
+    meta: {
+      layout: 'blank',
+    },
   },
 ]
 
