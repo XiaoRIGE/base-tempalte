@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <main>
+  <main>
+    <router-view v-slot="{ Component }">
       <keep-alive>
-        <router-view></router-view>
+        <component :is="Component" />
       </keep-alive>
-    </main>
-  </div>
+    </router-view>
+  </main>
 </template>
 
 <script>
