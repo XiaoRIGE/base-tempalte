@@ -17,6 +17,11 @@ userStore.increment()
 const route = useRoute()
 var a = "fix";
 
+let b = {
+  name:'bbb',
+  age:41
+}
+
 const resolveLayout = computed(() => {
   if (route.name === null) return null
 
