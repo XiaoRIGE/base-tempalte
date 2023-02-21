@@ -35,7 +35,7 @@ yarn build:qa  => vite build --mode test
 - vue3全家桶 vue3 + vue-router@4 + pinia(新版本的vuex.按需使用，如果不需要的项目可以移除)
 - http 请求:axios
 - 提交规范:git cz commitizen
-- 代码检查:eslint,格式化:prettier.提交之前检查与修复：lint-staged
+- 代码检查:eslint,格式化:prettier.提交之前检查与修复：lint-staged,commitLint
 
 
 
