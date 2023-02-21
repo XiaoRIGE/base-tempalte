@@ -15,6 +15,7 @@ import useUserStore from '@/stores/user'
 import { useRoute } from 'vue-router'
 import LayoutBlank from '@/layouts/Blank.vue'
 import LayoutContent from '@/layouts/Content.vue'
+import { message } from 'ant-design-vue'
 
 const userStore = useUserStore()
 userStore.increment()
@@ -28,6 +29,8 @@ const resolveLayout = computed(() => {
 
   return LayoutContent // 菜单栏布局
 })
+
+message.info('This is a normal message')
 </script>
 
 <style scoped></style>
