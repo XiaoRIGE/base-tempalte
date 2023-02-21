@@ -17,7 +17,7 @@ userStore.increment()
 const route = useRoute()
 var a = "fix";
 
-let d = {
+let e = {
   name:'bbb',
   age:41
 }
