@@ -1,12 +1,14 @@
 <template>
-  <component :is="resolveLayout">
-    <router-view v-slot="{ Component }">
-      <keep-alive>
-        <component :is="Component" v-if="$route.meta.keepAlive" />
-      </keep-alive>
-      <component :is="Component" v-if="!$route.meta.keepAlive" />
-    </router-view>
-  </component>
+  <a-config-provider :locale="locale">
+    <component :is="resolveLayout">
+      <router-view v-slot="{ Component }">
+        <keep-alive>
+          <component :is="Component" v-if="$route.meta.keepAlive" />
+        </keep-alive>
+        <component :is="Component" v-if="!$route.meta.keepAlive" />
+      </router-view>
+    </component>
+  </a-config-provider>
 </template>
 
 <script setup>
@@ -16,6 +18,13 @@ import { useRoute } from 'vue-router'
 import LayoutBlank from '@/layouts/Blank.vue'
 import LayoutContent from '@/layouts/Content.vue'
 import { message } from 'ant-design-vue'
+
+import zhCN from 'ant-design-vue/es/locale/zh_CN'
+import dayjs from 'dayjs'
+import 'dayjs/locale/zh-cn'
+dayjs.locale('zh-cn')
+
+const locale = zhCN
 
 const userStore = useUserStore()
 userStore.increment()
