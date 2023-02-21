@@ -15,14 +15,6 @@ const userStore = useUserStore()
 userStore.increment()
 
 const route = useRoute()
-const a = 'fix'
-
-const f = {
-  name: 'bbb',
-  age: 41,
-}
-
-console.log('a,f', a, f)
 
 const resolveLayout = computed(() => {
   if (route.name === null) return null
