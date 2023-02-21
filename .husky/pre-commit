@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# npm run fix
+# git add .
+
+# 只检测暂存区的代码
+npx --no-install lint-staged

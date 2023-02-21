@@ -11,8 +11,10 @@
     "preview": "vite preview",
     "commit": "npx cz",
     "fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "lint:fix": "eslint --fix",
     "prettier": "npx prettier --write .",
-    "style": "stylelint \"src/**/*.(css)\" --fix"
+    "style": "stylelint \"src/**/*.(css)\" --fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "element-plus": "^2.2.32",
@@ -52,15 +54,15 @@
     }
   },
   "lint-staged": {
-    "*.{scss,vue}": [
-      "stylelint --fix"
+    "src/**/*.{js,ts,tsx,jsx,vue}": [
+      "npm run lint:fix",
+      "prettier --write"
     ],
-    "*.{js,ts,vue}": [
-      "vue-cli-service lint"
+    "src/**/*.{css,less,scss}": [
+      "prettier --write"
+    ],
+    "src/**/*.{md,json}": [
+      "prettier --write"
     ]
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged",
-    "commit-msg": "commitlint -eV"
   }
 }
