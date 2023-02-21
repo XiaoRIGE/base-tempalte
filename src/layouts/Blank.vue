@@ -1,15 +1,5 @@
 <template>
   <main>
-    <router-view v-slot="{ Component }">
-      <keep-alive>
-        <component :is="Component" />
-      </keep-alive>
-    </router-view>
+    <slot></slot>
   </main>
 </template>
-
-<script>
-export default {}
-</script>
-
-<style></style>

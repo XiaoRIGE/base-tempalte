@@ -13,6 +13,9 @@ const moduleARoutes = [
     path: '/class-b',
     name: 'classB',
     component: () => import('@/views/moduleA/classB/index.vue'),
+    meta: {
+      keepAlive: true,
+    },
   },
   {
     path: '/class-b/detail',
