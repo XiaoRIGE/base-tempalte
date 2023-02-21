@@ -19,8 +19,6 @@ const locale = zhCn
 
 const userStore = useUserStore()
 userStore.increment()
-  
-    var a = '123'
 
 const route = useRoute()
 
