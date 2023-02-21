@@ -12,6 +12,10 @@ userStore.increment()
 const number = computed(() => {
   return userStore.count
 })
+
+const a = 'fix'
+
+console.log('a', a)
 </script>
 
 <style lang="scss" scoped></style>
