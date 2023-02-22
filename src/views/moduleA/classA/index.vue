@@ -8,10 +8,5 @@
     </button>
   </div>
 </template>
-<script>
-export default {
-  name: 'ClassA',
-}
-</script>
-
+<script setup></script>
 <style lang="scss" scoped></style>
