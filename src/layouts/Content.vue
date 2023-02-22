@@ -3,11 +3,8 @@
     <Header />
     <div class="main-box">
       <Aside />
-
       <main class="main">
-        <div class="app-content-container boxed-container pa-4">
-          <slot></slot>
-        </div>
+        <slot></slot>
       </main>
     </div>
   </div>
@@ -26,22 +23,21 @@ import Aside from './Aside.vue'
   .header {
     height: 80px;
     background-color: #91caff;
-    // flex-grow: 0;
   }
-}
-.main-box {
-  background-color: #fafafa;
-  flex: 1;
-  flex-grow: 1;
-  flex: 1;
-  flex-grow: 1;
-  display: flex;
-  .aside {
-    width: 200px;
-    background: #e6f4ff;
-  }
-  .main {
+  .main-box {
+    background-color: #fafafa;
     flex: 1;
+    flex-grow: 1;
+    display: flex;
+    .aside {
+      width: 200px;
+      background: #e6f4ff;
+    }
+    .main {
+      flex: 1;
+      height: calc(100vh - 60px);
+      overflow: auto;
+    }
   }
 }
 </style>
