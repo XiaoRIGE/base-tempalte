@@ -35,10 +35,50 @@ yarn build:qa  => vite build --mode test
 - vue3全家桶 vue3 + vue-router@4 + pinia(新版本的vuex.按需使用，如果不需要的项目可以移除)
 - http 请求:axios
 - 提交规范:git cz commitizen
-- 代码检查:eslint,格式化:prettier.提交之前检查与修复：lint-staged
+- 代码检查:eslint,格式化:prettier.提交之前检查与修复：lint-staged,commitLint
 
 
+### 目录结构
 
+```
+├── README.md
+├── package.json
+├── index.html
+├── .husky  # git hooks配置
+├── .vscode  # 保持项目各成员使用相同的编辑器配置
+├── coverage  # 单测结果
+├── src
+│   ├── api  # 请求接口
+│   ├── assets  # 静态资源
+│          └── styles 全局样式
+│          └── images 图片资源
+│   ├── components  # 通用业务组件
+│   ├── directives # 指令集（如需，可自行补充）
+│   ├── hooks # 全局hooks
+│   ├── layouts  # 布局
+│   ├── mock  # 模拟数据
+│   ├── routers # 路由配置
+│   ├── stores  # 状态管理中心
+│   └── utils  # 工具库
+│   ├── views  # 页面模板
+│   └── App.vue  # 视图入口
+│   └── main.ts  # 入口文件
+└── .commitlintrc.js  # commitLint配置
+└── .cz-config.js  # commitMsg
+└── .env.development  # 开发环境使用的环境变量
+└── .env.test  # 测试环境使用的环境变量
+└── .env.production  # 生产环境使用的环境变量
+└── .eslintrc.js  # eslint规则配置
+└── .gitignore
+└── .prettierrc.js  # prettier规则配置
+└── .stylelintrc.json  # stylelint规则配置
+└── vite.config.js  # vite打包配置
+└── vitese.config.js  # vitest打包配置(单测使用)
+├── tests  单元测试
+│   ├── api   # 接口测试
+│   ├── unit  # 组件测试、业务测试
+
+```
 
 
 ### Customize configuration
