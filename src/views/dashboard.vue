@@ -1,5 +1,5 @@
 <template>
-  <div class="z-10 py-8">dashboard</div>
+  <div class="dashboard">dashboard</div>
   {{ number }}
 </template>
 

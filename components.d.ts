@@ -16,6 +16,7 @@ declare module '@vue/runtime-core' {
     BaseForm: typeof import('./src/components/form/BaseForm.vue')['default']
     DemoChild: typeof import('./src/components/globalComponents/DemoChild.vue')['default']
     DemoParent: typeof import('./src/components/globalComponents/DemoParent.vue')['default']
+    Hello: typeof import('./src/components/globalComponents/Hello.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
