@@ -26,6 +26,8 @@ dayjs.locale('zh-cn')
 
 const locale = zhCN
 
+console.log('import.meta.env', import.meta.env)
+
 const userStore = useUserStore()
 userStore.increment()
 
