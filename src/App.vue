@@ -22,6 +22,8 @@ import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 
 const locale = zhCn
 
+console.log('import.meta.env', import.meta.env)
+
 const userStore = useUserStore()
 userStore.increment()
 
