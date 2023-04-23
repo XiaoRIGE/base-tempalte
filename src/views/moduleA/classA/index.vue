@@ -8,5 +8,10 @@
     </button>
   </div>
 </template>
-<script setup></script>
+<script setup>
+import {onMounted} from 'vue'
+onMounted(()=>{
+  console.log('classA page onMounted ');
+})
+</script>
 <style lang="scss" scoped></style>
