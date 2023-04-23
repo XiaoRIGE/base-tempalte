@@ -5,6 +5,12 @@ import App from './App.vue'
 import router from './routers'
 import pinia from './stores'
 
+function say(){
+    console.log('153');
+    console.log('158');
+}
+say()
+
 // 暂不使用脚本方式全局注册组件 参考issue https://github.com/vitejs/vite/issues/10616
 // import componentRegister from './components/GlobalComponents/componentRegister.js'
 
