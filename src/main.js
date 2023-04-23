@@ -7,6 +7,7 @@ import pinia from './stores'
 
 function say(){
     console.log('153');
+    console.log('158');
 }
 say()
 
